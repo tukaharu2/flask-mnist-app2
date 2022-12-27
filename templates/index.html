@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Classifier</title>
+    <link rel="stylesheet" href="./static/stylesheet.css">
+</head>
+<body>
+    <header>   
+        <img class="header_img" src="https://aidemyexstorage.blob.core.windows.net/aidemycontents/1621500180546399.png" alt="Aidemy">
+        <a class="header-logo" href="#">Semantic Segmentation</a>
+    </header>
+
+    <div class="main">    
+        <h2> アップロード画像のセグメンテーションを行います</h2>
+        <p>猫、車の写った画像を送信してください</p>
+        <form method="POST" enctype="multipart/form-data">
+            <input class="file_choose" type="file" name="file">
+            <input class="btn" value="submit!" type="submit">
+        </form>
+        <div class="ans">
+          <img class="header_pred1"src={{filepath2}} onError="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2017/04/30/18/33/kittens-2273598_1280.jpg';">
+          <img class="header_pred2" src={{filepath1}} onError="this.onerror=null;this.src='https://cdn.pixabay.com/photo/2016/09/11/10/02/renault-juvaquatre-1661009_1280.jpg';">
+          
+        </div>
+    </div>
+
+    <footer>
+        <img class="footer_img" src="https://aidemyexstorage.blob.core.windows.net/aidemycontents/1621500180546399.png" alt="Aidemy">
+        <small>&copy; 2022 tukada, inc.</small>   
+    </footer>
+</body>
+</html>
