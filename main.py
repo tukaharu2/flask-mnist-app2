@@ -6,7 +6,7 @@ from tensorflow.keras.preprocessing import image
 
 import numpy as np
 import cv2
-import tensorflow as tfgit 
+import tensorflow as tf 
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -18,7 +18,7 @@ import subprocess
 command = '''
 curl -sc /tmp/cookie "https://drive.google.com/uc?export=download&id=16nbIQg7pDVUL1njBY_56-X5E1_YxsRnc" > /dev/null
 CODE="$(awk '/_warning_/ {print $NF}' /tmp/cookie)" 
-curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${CODE}&id=16nbIQg7pDVUL1njBY_56-X5E1_YxsRnc" -o unet1_12.h5
+curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=${CODE}&id=16nbIQg7pDVUL1njBY_56-X5E1_YxsRnc" -o Unet1_12.h5
 '''    
 subprocess.run(command, shell=True)
 #classes = ["0","1","2","3","4","5","6","7","8","9"]
